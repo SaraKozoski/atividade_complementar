@@ -10,9 +10,18 @@
     */
 
     // Entrada
-    
+    const valorImovel = Number(prompt(`Insira o valor do imóvel:`))
+    const anos = Number(prompt(`Insira em quantos anos será realizado o financiamento`))
+    const salario = Number(prompt(`Insira os eu salário mensal:`))
+    const parcela = anos * 12
+    const valormensal = valorImovel / parcela
     // Processamento
-
+    if(salario * 0.30 > valormensal ){
+        alert(`O financiamento foi concedido e o valor de parcela mensal será de R$ ${valormensal}.`)
+    }
+    else{
+        alert(`O financiamento foi negado.`)
+    }
     // Saída
 
 </script>

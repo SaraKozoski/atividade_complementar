@@ -15,9 +15,26 @@
     */
 
     // Entrada
-    
+    const salario = prompt(`Informe seu salário:`)
     // Processamento
+    if(salario<= 2.000,00 ){
+        let salarioAjuste = (salario * 0.85) + salario
+    alert(`O seu salário com ajuste ficou R$ ${salarioAjuste}.`)
 
+    }
+    else if(salario > 2.000,00){
+        let salarioAjuste = (salario * 0.90) + salario
+        alert(`O seu salário com o ajuste ficou R$ ${salarioAjuste}.`)
+    }
+    else if (salario > 4.000,00){
+        let salarioAjuste = (salario * 0.925) + salario
+        alert(`O seu salário com o ajuste ficou R$ ${salarioAjuste}.`)
+
+    }
+    else if (salario> 7.000,00){
+        let salarioAjuste = (salario * 0.95) + salario
+        alert(`O seu salário com o ajuste ficou R$ ${salarioAjuste}.`)
+    }
     // Saída
 
 </script>
