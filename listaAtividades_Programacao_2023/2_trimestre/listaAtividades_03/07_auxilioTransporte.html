@@ -2,9 +2,11 @@
 <script>
     // Problema: Auxílio Transporte
     /*
-    Faça um script que pergunte ao funcionário quanto recebe de salário por mês. O programa deverá perguntar ao profissional se ele deseja receber auxílio transporte e deverá perguntar se ele utiliza veículo próprio para se locomover ao trabalho. 
+    Faça um script que pergunte ao funcionário quanto recebe de salário por mês. O programa deverá perguntar ao profissional se ele deseja 
+    receber auxílio transporte e deverá perguntar se ele utiliza veículo próprio para se locomover ao trabalho. 
     
-    - Se o funcionário deseja receber auxílio transporte ou utiliza veículo próprio, deverão ser descontados 6% (0.06) da remuneração mensal informada pelo funcionário.
+    - Se o funcionário deseja receber auxílio transporte ou utiliza veículo próprio, deverão ser descontados 6% (0.06) da remuneração mensal
+    informada pelo funcionário.
     - Ainda, se utilizar veículo próprio, a empresa fornecerá um adicional de R$ 200,00.
     - ou, caso utilize apenas o transporte público, a empresa fornecerá um adicional de R$ 150,00.
     
@@ -12,9 +14,22 @@
     */
 
     // Entrada
-    
-    // Processamento
+    let salario = Number(prompt(`Insira quanto você recebe por mês:`))
+    const auxilio = prompt(`Você deseja utilizar o auxilio trasporte:(sim ou não) `)
+    const tipoVeiculo= prompt(`Você utiliza um um veículo prório para se locomover ao trabalho?(sim ou não)`)
 
+    // Processamento
+    if(auxilio === `sim`|| tipoVeiculo === `sim`){
+        salario =   salario - (salario * 0.06)
+        if(tipoVeiculo === `sim`){
+            salario =  prompt(`${salario + 200} você recebera um desconto no salario de ${salario} e no final com o auxilio recebera ${salario + 200} reais.` )
+
+        }
+        else {
+            salario =  prompt(` Você recebera um desconto no salario de ${salario} e no final com o auxilio recebera ${salario + 150} reais ` )
+        }
+
+    }
     // Saída
 
 </script>

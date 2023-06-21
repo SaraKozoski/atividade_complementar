@@ -15,9 +15,29 @@
     */
 
     // Entrada
-    
+    const cargo = prompt(`Insira qual é o seu cargo:`)
+    const viagens = Number(prompt(`Insira quantas viagens você faz por dia:`))
+    let valor = prompt(`Seu cargo é`)
     // Processamento
-
+    if(cargo === `Motorista`){
+        valor = valor + cargo
+        if(viagens <= 10){
+            valor =  prompt(`${valor} você recebera 120,00 reais.`) 
+        }
+        else{
+            valor = prompt(`${valor} você recebera 135,00 reais.`) 
+        }
+    }
+    else if(cargo === `Cobraador`){
+        valor=(`${valor} ${cargo} `)
+        if( viagens <= 10){
+            valor = prompt(`${valor} você recebera 100,00 reais.`) 
+        }
+        else{
+            valor = prompt(`${valor} você recebera 110,00 reais`)
+        }
+        
+    }
     // Saída
 
 </script>
