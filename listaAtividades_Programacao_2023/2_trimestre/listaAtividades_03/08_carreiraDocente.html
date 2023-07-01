@@ -21,9 +21,26 @@
     */
 
     // Entrada
+    const anosCarreira = Number(prompt(`Informe quantos anos de carreira você possui:`))
+    const projetosPesquisa = Number(prompt(`Insira quantos projetos de pesquisa você já coordenou:`))
+    const projetosExtensao = Number(prompt(`Insira quantos projetos de extensão você orientou?`))
+    const tccs = Number(prompt(`Insira quantos TCCs que você já orientou:`))
     
     // Processamento
-
+    let pontosAnos = anosCarreira * 2.5
+    let pontosProjPesq = projetosPesquisa * 5
+    let pontosProjExten = projetosExtensao * 5
+    let pontosTCCs = tccs * 3
+    let pontosTotal = pontosAnos +pontosProjExten + pontosProjPesq + pontosTCCs 
+    if(pontosTotal <= 30 ){
+        alert(`Convidado!`)
+    }
+    else if(pontosTotal < 50 ){
+        alert(`Convidado!`)
+    }
+    else if(pontosTotal >= 50){
+        alert(`Titular!`)
+    }
     // Saída
 
 </script>
