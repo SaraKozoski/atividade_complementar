@@ -13,9 +13,25 @@
     */
 
     // Entrada
-    const 
+    const valorComputador = Number(prompt(`Insira o valor do computador:`))
+    const formaPagamento = Number(prompt(`Insira a forma de pagamento:("B"- Boleto "D"-Dinheiro "P"pix)`))
     // Processamento
-
+    if (formaPagamento == "B" ){
+     let valorDesconto = (valorComputador * 0.03) + valorComputador
+     
+     alert(`O valor do computador via Boleto será de R$ ${valorDesconto}`)
+    }
+    else if (formaPagamento == "D"){
+        let valorDesconto = (valorComputador * 0.05) +valorComputador
+        alert(`O valor do comprutador via Dinheiro será de R$ ${valorDesconto}`)
+    }
+    else if (formaPagamento == "P"){
+        let valorDesconto = (valorComputador * 0.10 ) + valorComputador
+        alert(`O valordo computador via PIX será de R$ ${valorDesconto}`)
+    }
+    else{
+        alert(`Forma de Pagamento invalida!`)
+    }
     // Saída
 
 </script>

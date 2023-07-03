@@ -12,9 +12,27 @@
     */
 
     // Entrada
-    
+    const transSaoP = Number(prompt(`Informe o preço do transporte aéreo para São Paulo:`));
+    const transRJ = Number(prompt(`Informe o preço do transporte aéreo para Rio de Janeiro:`));
+    const hotelSaoP = Number(prompt(`Informe o preço do hotel por dia para São Paulo:`));
+    const hotelRJ = Number(prompt(`Informe o preço do hotel por dia para o Rio Janeiro:`));
+    const dias = Number(prompt(`Insira quantos dias você vai ficar no destino:`))
     // Processamento
+    if(dias!= 0){
+        let valorFinalSP = transSaoP + (hotelSaoP * dias)
+        let valorFinalRJ = transRJ + (hotelRJ * dias)
+        alert(`O valor da viagem para São Paulo é de R$ ${valorFinalSP} e da viagem para o Rio de Janeiro é de R$ ${valorFinalRJ}! `)
+        if(valorFinalRJ > valorFinalSP){
+            alert(`O valor da viagem para São Paulo é mais favoravel e o valor dela é de R$ ${valorFinalSP} `)
+        }
+        else[
+        alert(`O valor da viagem para o Rio de Janeiro é mais favoravel e o valor dela é de R$ ${valorFinalRJ} `)
 
+        ]
+    }
+    else{
+        alert(`O número de dias é invalido!`)
+    }
     // Saída
 
 </script>
